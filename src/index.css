@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/*
+ * WordPress theme isolation: minimal scoped reset.
+ * Do NOT override Tailwind utilities (no border-width: 0 on *, no padding: 0 on buttons).
+ */
+#cell-tech-booking-root.celltech-booking-isolated,
+#cell-tech-booking-root {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  color: #111827;
+  background-color: #f3f4f6;
+  color-scheme: light;
+}
+
+/* box-sizing only – Tailwind needs borders/padding to work */
+#cell-tech-booking-root *,
+#cell-tech-booking-root *::before,
+#cell-tech-booking-root *::after {
+  box-sizing: border-box;
+}
+
+/* Light reset for form elements – only fix theme overrides, don't nuke Tailwind */
+#cell-tech-booking-root input,
+#cell-tech-booking-root button,
+#cell-tech-booking-root select,
+#cell-tech-booking-root textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#cell-tech-booking-root input[type="text"],
+#cell-tech-booking-root input[type="email"],
+#cell-tech-booking-root input[type="tel"] {
+  appearance: none;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
