@@ -1,4 +1,6 @@
  # Celltech Booking Form
+ 
+https://github.com/user-attachments/assets/363272e5-f247-4012-b48c-5c32b35b001d
 
  A React-based booking form application built with Vite and bundled as a WordPress plugin. The plugin renders the booking UI inside an isolated iframe and sends booking requests via WordPress AJAX to your email.
 
